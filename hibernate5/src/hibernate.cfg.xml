@@ -1,0 +1,21 @@
+<hibernate-configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:schemaLocation="urn:jboss:hibernate-deployer:1.0 ">
+    //  followed the video by brother Tuckett
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        //changed port to 3307  3306 in use----acme was a db I already had created from cit261
+        <property name="connection.url">jdbc:mysql://localhost:3307/acme</property>
+        //set my sql password to password root was default
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+
+        <property name="connection.pool_size">1</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        <property name="show_sql">true</property>
+        //map setting form xml to Customer class
+        <mapping class="com.garymoser.hibernate.Customer"/>
+
+    </session-factory>
+</hibernate-configuration>
