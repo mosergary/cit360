@@ -1,7 +1,7 @@
 package com.cit360;
 
 import java.util.concurrent.TimeUnit;
-
+//from how to do in java.com executors
 class Task implements Runnable {
     private String name;
 
