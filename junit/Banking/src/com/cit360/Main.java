@@ -3,7 +3,6 @@ package com.cit360;
 public class Main {
 
     public static void main(String[] args){
-
-System.out.println('Junit test');
+System.out.println("junit test");
 }
 }
